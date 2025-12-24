@@ -1,0 +1,13 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9B59B6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Teardrop/leaf shape with rounded corners and gradient -->
+  <path d="M 25 5 Q 40 5 45 12 Q 45 20 42 28 Q 38 38 25 42 Q 12 38 8 28 Q 5 20 10 12 Q 15 5 25 5 Z" fill="url(#gradient)"/>
+  <!-- White circular cutout in center -->
+  <circle cx="25" cy="25" r="10" fill="white"/>
+</svg>
+

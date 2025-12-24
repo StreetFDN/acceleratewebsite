@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* Riccione Serial ExtraLight Font - 500.co heading font */
+@font-face {
+  font-family: 'Riccione Serial ExtraLight';
+  src: url('/fonts/Riccione-Serial-ExtraLight.woff2') format('woff2'),
+       url('/fonts/Riccione-Serial-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Riccione Serial ExtraLight';
+  src: url('/fonts/Riccione-Serial-ExtraLight-Italic.woff2') format('woff2'),
+       url('/fonts/Riccione-Serial-ExtraLight-Italic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* URW Nimbus Sans Round - Navbar font */
+@font-face {
+  font-family: 'URW Nimbus Sans Round';
+  src: url('/fonts/URWNimbusSansRound.woff2') format('woff2'),
+       url('/fonts/URWNimbusSansRound.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'URW Nimbus Sans Round';
+  src: url('/fonts/URWNimbusSansRound-Med.woff2') format('woff2'),
+       url('/fonts/URWNimbusSansRound-Med.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* 500.co Design Tokens - Exact Color Palette */
+  --background: #f5f5eb;
+  --background-off-white: #f5f5eb;
+  --foreground: #000000;
+  --foreground-charcoal: #1a1a1a;
+  --primary-red: #E60000;
+  --primary-red-dark: #CC0000;
+  --gray-600: #4b5563;
+  --gray-400: #9ca3af;
+}
+
+@theme inline {
+  /* 500.co Color Palette - Exact Hex Codes */
+  --color-background: #f5f5eb;
+  --color-background-off-white: #f5f5eb;
+  --color-foreground: #000000;
+  --color-foreground-charcoal: #1a1a1a;
+  --color-primary: #E60000;
+  --color-primary-dark: #CC0000;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-600: #4b5563;
+  --color-gray-400: #9ca3af;
+  
+  /* Typography - 500.co style fonts (Tobias for headings, Apercu for body) */
+  /* Font variables are set by Next.js font loader in layout.tsx */
+}
+
+/* Keep light theme - matching 500.co */
+
+body {
+  background: #f5f5eb;
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Riccione Serial ExtraLight', var(--font-heading), serif;
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: #000000;
+}
+
+/* 500.co Typography Scale */
+.text-hero {
+  font-family: 'Riccione Serial ExtraLight', var(--font-heading), serif;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.text-section-heading {
+  font-family: 'Riccione Serial ExtraLight', var(--font-heading), serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.text-hero-small {
+  font-family: 'Riccione Serial ExtraLight', var(--font-heading), serif;
+  font-size: clamp(2rem, 6.4vw, 4.8rem);
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  background: #f5f5eb;
+}
+
+/* Scroll animation utilities - f.inc style */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.scroll-animate.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.scroll-animate.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.scroll-animate.delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* 500.co style utilities */
+.bg-background-off-white {
+  background-color: var(--background-off-white);
+}
+
+/* Navbar font utility */
+.font-navbar {
+  font-family: 'URW Nimbus Sans Round', sans-serif;
+}
+
+/* Infinite scroll animation for moving banner */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.animate-scroll-infinite {
+  animation: scroll-infinite 5s linear infinite;
+  display: flex;
+  will-change: transform;
+}
