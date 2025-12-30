@@ -57,3 +57,5 @@ const ScrollAnimation = ({ children, delay = 0, className = '' }: ScrollAnimatio
 
 export default ScrollAnimation;
 
+
+
